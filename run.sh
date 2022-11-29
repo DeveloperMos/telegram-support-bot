@@ -1,0 +1,1 @@
+pm2 start "main.py" --name bot-pobeda-bot
