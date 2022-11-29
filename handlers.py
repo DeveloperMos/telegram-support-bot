@@ -7,12 +7,18 @@ def start(update, context):
     update.message.reply_text(WELCOME_MESSAGE)
 
     user_info = update.message.from_user.to_dict()
+    user_id = user_info['id']
+    language_code = user_info['language_code']
+    first_name = user_info['first_name']
+    if 'username' in user_info:
+        login = user_info['username']
+    else:
+        login = "скрыто"
+    
 
     context.bot.send_message(
         chat_id=TELEGRAM_SUPPORT_CHAT_ID,
-        text=f"""
-📞 Connected {user_info}.
-        """,
+        text=f""" Connected id: {user_id}, язык: {language_code}, узернейм/логин: {login} имя: {first_name}""",
     )
 
 
