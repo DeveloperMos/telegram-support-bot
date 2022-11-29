@@ -7,7 +7,7 @@ readme = "README.md"
 packages = [{include = "telegram_support_bot"}]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 python-telegram-bot = "^13.14"
 python-dotenv = "^0.21.0"
 
